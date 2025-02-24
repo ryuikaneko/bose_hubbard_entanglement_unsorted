@@ -1,0 +1,41 @@
+#set xrange [0:0.00025]
+#set yrange [0:0.01]
+set xlabel "Nsamples"
+set ylabel "std err of entropy density: {/Symbol D}s/L"
+set key right top
+set grid
+set yrange [1e-6:1]
+set log
+p \
+"dat_L16" u (2**$2):($3/$1):($4/$1) every ::0 w e ti "L16", \
+"dat_L20" u (2**$2):($3/$1):($4/$1) every ::0 w e ti "L20", \
+"dat_L24" u (2**$2):($3/$1):($4/$1) every ::0 w e ti "L24", \
+"dat_L28" u (2**$2):($3/$1):($4/$1) every ::0 w e ti "L28", \
+"dat_L32" u (2**$2):($3/$1):($4/$1) every ::0 w e ti "L32", \
+"dat_L36" u (2**$2):($3/$1):($4/$1) every ::0 w e ti "L36", \
+"dat_L40" u (2**$2):($3/$1):($4/$1) every ::1 w e ti "L40", \
+"dat_L44" u (2**$2):($3/$1):($4/$1) every ::3 w e ti "L44", \
+"dat_L48" u (2**$2):($3/$1):($4/$1) every ::4 w e ti "L48", \
+"dat_L52" u (2**$2):($3/$1):($4/$1) every ::5 w e ti "L52", \
+"dat_L56" u (2**$2):($3/$1):($4/$1) every ::6 w e ti "L56", \
+"dat_L60" u (2**$2):($3/$1):($4/$1) every ::7 w e ti "L60", \
+x**(-0.5)
+pause -1
+
+set xlabel "Nsamples/2^(const.*L)"
+const=0.20
+p \
+"dat_L16" u (2**($2-const*$1)):($3/$1):($4/$1) every ::0 w e ti "L16", \
+"dat_L20" u (2**($2-const*$1)):($3/$1):($4/$1) every ::0 w e ti "L20", \
+"dat_L24" u (2**($2-const*$1)):($3/$1):($4/$1) every ::0 w e ti "L24", \
+"dat_L28" u (2**($2-const*$1)):($3/$1):($4/$1) every ::0 w e ti "L28", \
+"dat_L32" u (2**($2-const*$1)):($3/$1):($4/$1) every ::0 w e ti "L32", \
+"dat_L36" u (2**($2-const*$1)):($3/$1):($4/$1) every ::0 w e ti "L36", \
+"dat_L40" u (2**($2-const*$1)):($3/$1):($4/$1) every ::1 w e ti "L40", \
+"dat_L44" u (2**($2-const*$1)):($3/$1):($4/$1) every ::3 w e ti "L44", \
+"dat_L48" u (2**($2-const*$1)):($3/$1):($4/$1) every ::4 w e ti "L48", \
+"dat_L52" u (2**($2-const*$1)):($3/$1):($4/$1) every ::5 w e ti "L52", \
+"dat_L56" u (2**($2-const*$1)):($3/$1):($4/$1) every ::6 w e ti "L56", \
+"dat_L60" u (2**($2-const*$1)):($3/$1):($4/$1) every ::7 w e ti "L60", \
+x**(-0.5)/16.0
+pause -1

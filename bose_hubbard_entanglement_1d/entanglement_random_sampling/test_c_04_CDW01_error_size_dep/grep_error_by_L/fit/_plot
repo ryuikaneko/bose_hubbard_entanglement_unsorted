@@ -1,0 +1,98 @@
+#set xrange [0:0.00025]
+#set yrange [0:0.01]
+set xlabel "Nsamples"
+set ylabel "std err of entropy density: {/Symbol D}s/L"
+set key right top
+set grid
+set yrange [1e-6:1]
+set log
+
+
+f16(x)=a16*x**(-0.5)
+fit f16(x) \
+"../dat_L16" u (2**$2):($3/$1):($4/$1) every ::0 \
+via a16
+
+f20(x)=a20*x**(-0.5)
+fit f20(x) \
+"../dat_L20" u (2**$2):($3/$1):($4/$1) every ::0 \
+via a20
+
+f24(x)=a24*x**(-0.5)
+fit f24(x) \
+"../dat_L24" u (2**$2):($3/$1):($4/$1) every ::0 \
+via a24
+
+f28(x)=a28*x**(-0.5)
+fit f28(x) \
+"../dat_L28" u (2**$2):($3/$1):($4/$1) every ::0 \
+via a28
+
+f32(x)=a32*x**(-0.5)
+fit f32(x) \
+"../dat_L32" u (2**$2):($3/$1):($4/$1) every ::0 \
+via a32
+
+f36(x)=a36*x**(-0.5)
+fit f36(x) \
+"../dat_L36" u (2**$2):($3/$1):($4/$1) every ::0 \
+via a36
+
+f40(x)=a40*x**(-0.5)
+fit f40(x) \
+"../dat_L40" u (2**$2):($3/$1):($4/$1) every ::1 \
+via a40
+
+f44(x)=a44*x**(-0.5)
+fit f44(x) \
+"../dat_L44" u (2**$2):($3/$1):($4/$1) every ::3 \
+via a44
+
+f48(x)=a48*x**(-0.5)
+fit f48(x) \
+"../dat_L48" u (2**$2):($3/$1):($4/$1) every ::4 \
+via a48
+
+f52(x)=a52*x**(-0.5)
+fit f52(x) \
+"../dat_L52" u (2**$2):($3/$1):($4/$1) every ::5 \
+via a52
+
+f56(x)=a56*x**(-0.5)
+fit f56(x) \
+"../dat_L56" u (2**$2):($3/$1):($4/$1) every ::6 \
+via a56
+
+f60(x)=a60*x**(-0.5)
+fit f60(x) \
+"../dat_L60" u (2**$2):($3/$1):($4/$1) every ::7 \
+via a60
+
+
+p \
+"../dat_L16" u (2**$2):($3/$1):($4/$1) every ::0 w e ti "L16", \
+"../dat_L60" u (2**$2):($3/$1):($4/$1) every ::7 w e ti "L60", \
+f16(x), \
+f60(x)
+pause -1
+pause -1
+
+!mv fit.log dat_fit
+
+!./grep.sh
+
+
+g(x)=a+b*x
+fit g(x) \
+"dat_coeff" u 1:(log($2)/log(2.0)) \
+via a,b
+
+reset
+set log y
+p \
+"dat_coeff" u 1:2 w p ti "", \
+2**(g(x))
+pause -1
+pause -1
+
+!mv fit.log dat_fit_coeff
