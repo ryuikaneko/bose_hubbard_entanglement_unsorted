@@ -1,0 +1,9 @@
+set xrange [0:]
+set yrange [0:]
+p \
+"< cat dat_renyib_L*_t* | sort -g -k 1" u 1:4 w l ls 1 ti "", \
+"< cat dat_renyib_L*_t* | sort -g -k 1" u 1:5 w l ls 1 ti "", \
+"< cat dat_renyij_L*_t* | sort -g -k 1" u 1:4 w l ls 2 ti "", \
+"< cat dat_renyij_L*_t* | sort -g -k 1" u 1:5 w l ls 2 ti "", \
+"../../exact_cdw/dat_ee_L40" u 1:2 w l ls 3 ti "exact"
+pause -1

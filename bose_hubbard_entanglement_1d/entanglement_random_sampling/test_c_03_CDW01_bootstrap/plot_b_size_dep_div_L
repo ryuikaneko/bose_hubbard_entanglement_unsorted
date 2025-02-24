@@ -1,0 +1,10 @@
+set xrange [0:]
+set yrange [0:]
+set key right bottom
+p \
+"< cat ./L20/dat_renyib_L*_t* | sort -g -k 1" u ($1/20):($2/20):($3/20) w errorl ti "20", \
+"< cat ./L40/dat_renyib_L*_t* | sort -g -k 1" u ($1/40):($2/40):($3/40) w errorl ti "40", \
+"< cat ./L60/dat_renyib_L*_t* | sort -g -k 1" u ($1/60):($2/60):($3/60) w errorl ti "60", \
+"< cat ./L80/dat_renyib_L*_t* | sort -g -k 1" u ($1/80):($2/80):($3/80) w errorl ti "80", \
+"< cat ./L100/dat_renyib_L*_t* | sort -g -k 1" u ($1/100):($2/100):($3/100) w errorl ti "100"
+pause -1
