@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -dynamiclib -Wl,-headerpad_max_install_names -o libcnpy.dylib -install_name @rpath/libcnpy.dylib CMakeFiles/cnpy.dir/cnpy.cpp.o  /opt/local/lib/libz.dylib 
