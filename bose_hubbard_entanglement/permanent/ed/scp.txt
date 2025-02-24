@@ -1,0 +1,2 @@
+scp kindai:/home/kaneko/work/quspin/test_30_1d_bose_hubbard_quench_U0_entanglement/test_1/dat_s_L* .
+scp kindai:/home/kaneko/work/quspin/test_30_1d_bose_hubbard_quench_U0_entanglement/test_1/chain_bose_hubbard.py .
