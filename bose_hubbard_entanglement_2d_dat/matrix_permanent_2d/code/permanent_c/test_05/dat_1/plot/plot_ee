@@ -1,0 +1,7 @@
+p \
+"< cat ../2x2/dat_renyi_Lx*_Ly*_t* | sort -g -k 1" u 1:2 w l ti "2x2", \
+"< cat ../4x2/dat_renyi_Lx*_Ly*_t* | sort -g -k 1" u 1:2 w l ti "4x2", \
+"< cat ../4x4/dat_renyi_Lx*_Ly*_t* | sort -g -k 1" u 1:2 w l ti "4x4", \
+"< cat ../6x4/dat_renyi_Lx*_Ly*_t* | sort -g -k 1" u 1:2 w l ti "6x4", \
+"< cat ../6x6/dat_renyi_Lx*_Ly*_t* | sort -g -k 1" u 1:2 w l ti "6x6"
+pause -1

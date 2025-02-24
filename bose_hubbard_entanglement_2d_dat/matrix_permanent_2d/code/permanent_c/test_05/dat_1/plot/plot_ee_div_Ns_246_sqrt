@@ -1,0 +1,5 @@
+p \
+"< cat ../2x2/dat_renyi_Lx*_Ly*_t* | sort -g -k 1" u ($1/sqrt(2*2)):($2/2/2) w l ti "2x2", \
+"< cat ../4x4/dat_renyi_Lx*_Ly*_t* | sort -g -k 1" u ($1/sqrt(4*4)):($2/4/4) w l ti "4x4", \
+"< cat ../6x6/dat_renyi_Lx*_Ly*_t* | sort -g -k 1" u ($1/sqrt(6*6)):($2/6/6) w l ti "6x6"
+pause -1
