@@ -1,0 +1,17 @@
+set xrange [0:]
+set yrange [0:]
+set key right bottom
+p \
+"< cat ./L20/dat_renyi_L*_t* | sort -g -k 1" u ($1/20):($2/20) w lp ls 1 ti "20", \
+"< cat ./L20/dat_renyi_L*_t* | sort -g -k 1" u ($1/20):($3/20) w lp ls 1 ti "", \
+"< cat ./L20/dat_renyi_L*_t* | sort -g -k 1" u ($1/20):($4/20) w lp ls 1 ti "", \
+"< cat ./L24/dat_renyi_L*_t* | sort -g -k 1" u ($1/24):($2/24) w lp ls 2 ti "24", \
+"< cat ./L24/dat_renyi_L*_t* | sort -g -k 1" u ($1/24):($3/24) w lp ls 2 ti "", \
+"< cat ./L24/dat_renyi_L*_t* | sort -g -k 1" u ($1/24):($4/24) w lp ls 2 ti "", \
+"< cat ./L28/dat_renyi_L*_t* | sort -g -k 1" u ($1/28):($2/28) w lp ls 3 ti "28", \
+"< cat ./L28/dat_renyi_L*_t* | sort -g -k 1" u ($1/28):($3/28) w lp ls 3 ti "", \
+"< cat ./L28/dat_renyi_L*_t* | sort -g -k 1" u ($1/28):($4/28) w lp ls 3 ti "", \
+"< cat ./L32/dat_renyi_L*_t* | sort -g -k 1" u ($1/32):($2/32) w lp ls 3 ti "32", \
+"< cat ./L32/dat_renyi_L*_t* | sort -g -k 1" u ($1/32):($3/32) w lp ls 3 ti "", \
+"< cat ./L32/dat_renyi_L*_t* | sort -g -k 1" u ($1/32):($4/32) w lp ls 3 ti ""
+pause -1
