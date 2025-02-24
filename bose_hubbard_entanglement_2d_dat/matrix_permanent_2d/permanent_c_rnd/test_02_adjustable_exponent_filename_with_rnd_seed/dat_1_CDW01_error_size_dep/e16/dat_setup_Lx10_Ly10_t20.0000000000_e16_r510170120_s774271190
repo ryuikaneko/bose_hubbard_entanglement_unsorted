@@ -1,0 +1,2 @@
+# Lx,Ly,tstep,seed[0],seed[1],exponent,Ntotal,Nblock,Nblocksize
+10 10 20.0000000000 510170120 774271190 16 65536 1024 64
