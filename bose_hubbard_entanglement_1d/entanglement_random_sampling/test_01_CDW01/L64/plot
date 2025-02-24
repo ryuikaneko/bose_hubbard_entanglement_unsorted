@@ -1,0 +1,5 @@
+p \
+"< cat dat_L*_t*_ave | sort -g -k 1" w lp ti "", \
+"< cat dat_L*_t*_err1 | sort -g -k 1" w l ti "", \
+"< cat dat_L*_t*_err2 | sort -g -k 1" w l ti ""
+pause -1

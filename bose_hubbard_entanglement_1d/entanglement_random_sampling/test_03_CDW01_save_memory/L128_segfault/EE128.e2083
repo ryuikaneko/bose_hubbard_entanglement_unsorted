@@ -1,0 +1,1 @@
+/usr/sge/default/dp11/job_scripts/2083: line 35: 41269 Segmentation fault      (core dumped) ${python} ${prog} -L ${L} -t ${t} > dat_log_L${L}_t${t}
