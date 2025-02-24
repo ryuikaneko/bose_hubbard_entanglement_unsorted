@@ -1,0 +1,8 @@
+set xrange [0:]
+set yrange [0:]
+p \
+"< cat dat_renyi_L*_t* | sort -g -k 1" u 1:(exp(-$2)-exp(-$4)) w lp ti ""
+#"< cat dat_renyi_L*_t* | sort -g -k 1" u 1:(exp(-$2)) w lp ti "", \
+#"< cat dat_renyi_L*_t* | sort -g -k 1" u 1:(exp(-$3)) w lp ti "", \
+#"< cat dat_renyi_L*_t* | sort -g -k 1" u 1:(exp(-$4)) w lp ti ""
+pause -1
