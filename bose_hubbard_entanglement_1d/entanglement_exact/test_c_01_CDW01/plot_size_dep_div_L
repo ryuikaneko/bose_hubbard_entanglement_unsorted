@@ -1,0 +1,10 @@
+set xrange [0:]
+set yrange [0:]
+set key right bottom
+p \
+"< cat ./L16/dat_renyi_L*_t* | sort -g -k 1" u ($1/16):($2/16) w lp ti "16", \
+"< cat ./L20/dat_renyi_L*_t* | sort -g -k 1" u ($1/20):($2/20) w lp ti "20", \
+"< cat ./L24/dat_renyi_L*_t* | sort -g -k 1" u ($1/24):($2/24) w lp ti "24", \
+"< cat ./L28/dat_renyi_L*_t* | sort -g -k 1" u ($1/28):($2/28) w lp ti "28", \
+"< cat ./L32/dat_renyi_L*_t* | sort -g -k 1" u ($1/32):($2/32) w lp ti "32"
+pause -1
