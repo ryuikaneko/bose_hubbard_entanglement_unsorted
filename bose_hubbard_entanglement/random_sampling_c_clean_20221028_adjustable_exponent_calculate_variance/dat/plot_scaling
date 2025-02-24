@@ -1,0 +1,22 @@
+set xrange [0:]
+set yrange [0:]
+set xlabel "1/log2(Nsamples)"
+set ylabel "std err of entropy density: {/Symbol D}s/L"
+set key left top
+set grid
+f(x)=-x*0.2
+p \
+"< cat dat_renyib_L16_t32.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L16", \
+"< cat dat_renyib_L18_t36.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L18", \
+"< cat dat_renyib_L20_t40.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L20", \
+"< cat dat_renyib_L22_t44.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L22", \
+"< cat dat_renyib_L24_t48.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L24", \
+"< cat dat_renyib_L26_t52.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L26", \
+"< cat dat_renyib_L28_t56.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L28", \
+"< cat dat_renyib_L30_t60.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L30", \
+"< cat dat_renyib_L32_t64.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L32", \
+"< cat dat_renyib_L34_t68.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L34", \
+"< cat dat_renyib_L36_t72.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L36", \
+"< cat dat_renyib_L38_t76.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L38", \
+"< cat dat_renyib_L40_t80.0000000000_e*" u (1/($11+f($10))):($3/$10) w p ti "L40"
+pause -1
