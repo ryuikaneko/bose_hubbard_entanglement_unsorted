@@ -1,0 +1,5 @@
+p \
+"< cat dat_renyib_Lx3_Ly4_t*_e* | sort -g -k 1" u 1:2:3 w errorl, \
+"../../../permanent/ed/3x4/dat" u 1:($7*$3/2) w l, \
+"< cat ../../../permanent/python/3x4/dat*" u 1:2 w l
+pause -1

@@ -1,0 +1,2 @@
+# Lx,Ly,tstep,seed[0],seed[1],exponent,Ntotal,Nblock,Nblocksize
+4 4 8.8000000000 42 54 18 262144 1024 256
