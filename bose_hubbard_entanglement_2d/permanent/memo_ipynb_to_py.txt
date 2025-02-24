@@ -1,0 +1,2 @@
+# https://qiita.com/fault/items/030616a85c91ebe04296
+jupyter nbconvert --to python XXX.ipynb

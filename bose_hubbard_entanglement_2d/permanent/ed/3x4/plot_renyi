@@ -1,0 +1,11 @@
+set xrange [0:40]
+
+p \
+"dat" u 1:($7*$3/2) w lp
+pause -1
+pause -1
+
+p \
+"dat" u 1:($6*$3/2) w lp
+pause -1
+pause -1

@@ -1,0 +1,2 @@
+#scp -r kondokindai:/home/kaneko/work/quspin/test_22_mbl_entanglement_bose_hubbard/_2d_bose_hubbard_entropy__half_unit_filling/cdw01_init_Nsps_full/test_1_U0.0_W0.0/3x4 .
+scp -r kondokindai:/home/kaneko/work/quspin/test_22_mbl_entanglement_bose_hubbard/_2d_bose_hubbard_entropy__half_unit_filling/cdw01_init_Nsps_full/test_1_U0.0_W0.0/* .
