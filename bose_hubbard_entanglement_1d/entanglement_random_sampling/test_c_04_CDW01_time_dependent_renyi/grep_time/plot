@@ -1,0 +1,16 @@
+set xrange [0:120]
+#set log
+set log y
+set grid
+
+f(x)=a+b*x
+fit f(x) \
+"dat_time" u 1:(log($2)) \
+via a,b
+
+p \
+"dat_time" u 1:2:3 w e ti "", \
+exp(f(x)) w l ti ""
+pause -1
+
+!mv fit.log dat_fit
