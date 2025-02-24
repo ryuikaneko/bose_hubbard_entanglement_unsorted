@@ -1,0 +1,5 @@
+set term png
+set output "fig_cdw01_L20.png"
+set xlabel "time"
+set ylabel "Renyi entanglement entropy"
+p "dat_L20" w lp ti ""
