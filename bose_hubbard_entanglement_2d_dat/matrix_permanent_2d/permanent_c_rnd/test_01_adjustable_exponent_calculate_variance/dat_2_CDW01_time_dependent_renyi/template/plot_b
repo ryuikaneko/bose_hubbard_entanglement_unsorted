@@ -1,0 +1,5 @@
+set xrange [0:]
+set yrange [0:]
+p \
+"< cat dat_renyib_L*_t* | sort -g -k 1" u 1:2:3 w errorl ti ""
+pause -1
